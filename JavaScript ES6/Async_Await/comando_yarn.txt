@@ -26,3 +26,5 @@ adicionar em webpack.config.js:
 {Trabalhar com async}
 yarn add @babel/plugin-transform-async-to-generator
 yarn add @babel/polyfill -D
+
+yarn add axios
