@@ -1,4 +1,0 @@
-yarn -init
-yarn -init
-yarn add @babel/cli
-yarn add @babel/core
