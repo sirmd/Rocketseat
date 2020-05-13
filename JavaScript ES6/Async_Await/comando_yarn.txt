@@ -1,0 +1,28 @@
+yarn -init
+yarn -init
+yarn add @babel/cli
+yarn add @babel/core
+
+{Adiciona o WebPack}
+Webpack: Serviço para trabalhar com vários arquivos .js na aplicação. Carregar imagens usando javascript...
+Todos .js serão compilados em 1 bundle.js
+yarn add webpack webpack-cli -D 
+
+{Adiciona loader do Babel para executar o Babel toda vez que rodar o app}
+yarn add babel-loader -D
+adicionar em webpack.config.js:
+                module.exports = {
+                    module:{
+                        rules: [
+                            {
+                                use:{
+                                    loader: 'babel-loader',
+                                }
+                            }
+                        ]
+                    }
+                }
+
+{Trabalhar com async}
+yarn add @babel/plugin-transform-async-to-generator
+yarn add @babel/polyfill -D
