@@ -1,3 +1,4 @@
-import {idade} from "./functions";
+import {Usuario, idade as IdadeUsuario} from "./functions";
 
-console.log(idade);
+Usuario.info();
+console.log(IdadeUsuario);
