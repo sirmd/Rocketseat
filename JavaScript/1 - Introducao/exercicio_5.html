@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>Curso JavaScript</title>
+</head>
+
+<body>
+
+    <script>
+        function habilidades(usuarios) {
+            for (var j = 0; j < usuarios.length; j++) {
+                var skills = " O " + usuarios[j].nome +
+                    " possui as habilidades: ";
+
+                skills += usuarios[j].habilidades.join();
+                console.log(skills);
+            }
+
+        }
+        var usuarios = [
+            {
+                nome: "Diego",
+                habilidades: ["Javascript", "ReactJS", "Redux"]
+            },
+            {
+                nome: "Gabriel",
+                habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+            }
+        ]
+        habilidades(usuarios);
+
+    </script>
+
+</body>
+
+</html>

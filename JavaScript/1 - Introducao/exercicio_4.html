@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Curso JavaScript</title>
+</head>
+
+<body>
+
+    <script>
+        function experiencia(anos) {
+            switch (true) {
+                case (anos >= 0 && anos < 1):
+                    return "iniciante"
+                    break;
+                case (anos >= 1 && anos < 3):
+                    return "intermediário"
+                    break;
+                case (anos >= 3 && anos < 6):
+                    return "avançado"
+                    break;
+                case (anos >= 7):
+                    return "Jedi Master"
+                    break;
+                default:
+                    return "inexperiente"
+                    break;
+            }
+        }
+
+        var anosEstudo = 4;
+        console.log(experiencia(anosEstudo));
+
+
+    </script>
+
+</body>
+
+</html>

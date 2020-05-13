@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Curso JavaScript</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" name="nome" id="nome"/>
+        <input type="text" name="nome2" id="nome2"/>
+        <button class="botao">Adicionar</button>
+    </div>
+
+    <script>
+        var inputElementId = document.getElementById('nome');
+
+        // inputElementByTagName retorna uma lista de inputs
+        var inputElementByTag = document.getElementsByTagName('input')[0];
+        
+        // inputElementByClassName retorna uma lista de inputs
+        var inputElementByClassName = document.getElementsByClassName('input')[0];
+
+        // busca o input dentro da div 'app' que está dentro do body
+        var inputElementName = document.querySelector('body div#app input[name]');
+
+        // busca todos inputs dentro da div 'app' que está dentro do body
+        var allInputs = document.querySelectorAll('body div#app input[name]');
+
+        // busca um button com a classe botao
+        var btnElement = document.querySelector('button.botao');
+        
+        // busca o input dentro da div 'app' que está dentro do body
+        var inputElement = document.querySelector('input[name=nome]');
+
+
+        // adiciona evento onclick dentro do javaScript. (onclick tudo minúsculo)
+        btnElement.onclick = function(){
+            alert(inputElement.value);
+        }
+        
+        console.log(inputElement);
+        console.log(allInputs);
+        console.log(inputElementName);
+        console.log(inputElementId);
+        console.log(inputElementByTag);
+        console.log(inputElementByClassName);
+    </script>
+</body>
+
+</html>
