@@ -1,0 +1,7 @@
+npm init -y
+
+{Framework para lidar com rotas e views}
+npm express
+
+{Iniciar o server.js}
+node server.js
