@@ -1,15 +1,16 @@
 import "regenerator-runtime/runtime.js";
 import axios from 'axios';
 
-async function getUserFromGithub(user) {
+
+class Github {
+    static async getRepositories(repo) {
     try {
-        const response = await axios.get(`https://api.github.com/users/${user}`);
+        const response = await axios.get(`https://api.github.com/repos/${repo}`);
         console.log(response);
     } catch (err) {
-        console.log(`Usuário ${user} não existe`);
-        
+        console.warn(`Repositório ${repo} não existe`)
     }
+   }
 }
- 
-getUserFromGithub('sirmd');
-getUserFromGithub('diego3g124123');
+   Github.getRepositories('rocketseat/react-native-template-rocketseat-basic');
+   Github.getRepositories('rocketseat/dslkvmskv');
