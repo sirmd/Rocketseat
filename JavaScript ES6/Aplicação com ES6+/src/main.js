@@ -17,31 +17,52 @@ class App{
        this.formElement.onsubmit = event => this.addRepository(event);
     }
 
+    setLoading(loading = true){
+        if (loading) {
+            const loadingElement = document.createElement('span');
+            loadingElement.appendChild(document.createTextNode('Carregando'));
+            loadingElement.setAttribute('id', 'loading');
+
+            this.formElement.appendChild(loadingElement);
+        }
+        else{
+            document.getElementById('loading').remove();
+        }
+    }
+
     async addRepository(event){
         event.preventDefault();
+        this.setLoading();
 
         const repoInput = this.inputElement.value;
 
         if (repoInput.length === 0) {
             return;
         }
+        try {
+            const response = await api.get(`/repos/${repoInput}`);
+            const {name, description, html_url, owner: {avatar_url}} = response.data;
+            
 
-        const response = await api.get(`/repos/${repoInput}`);
-        const {name, description, html_url, owner: {avatar_url}} = response.data;
-        
+            console.log(name, description, html_url, avatar_url);
 
-        console.log(name, description, html_url, avatar_url);
+            this.repositories.push({
+                name: name,
+                description: description,
+                avatar_url: avatar_url,
+                html_url: html_url,
+            });
 
-        this.repositories.push({
-            name: name,
-            description: description,
-            avatar_url: avatar_url,
-            html_url: html_url,
-        });
+            this.inputElement.value = "";
 
-        this.inputElement.value = "";
+            this.render();
+        }
+        catch(err){
+            alert('Usuário/Repositório não encontrado');
+            this.inputElement.focus();
+        }
 
-        this.render();
+        this.setLoading(false);
     }
 
     render(){
