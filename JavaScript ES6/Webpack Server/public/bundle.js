@@ -81,32 +81,32 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./main.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/main.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./funcoes.js":
-/*!********************!*\
-  !*** ./funcoes.js ***!
-  \********************/
+/***/ "./src/funcoes.js":
+/*!************************!*\
+  !*** ./src/funcoes.js ***!
+  \************************/
 /*! exports provided: soma, sub */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"soma\", function() { return soma; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"sub\", function() { return sub; });\nfunction soma(a, b) {\n  return a + b;\n}\nfunction sub(a, b) {\n  return a - b;\n}\n\n//# sourceURL=webpack:///./funcoes.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"soma\", function() { return soma; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"sub\", function() { return sub; });\nfunction soma(a, b) {\n  return a + b;\n}\nfunction sub(a, b) {\n  return a - b;\n}\n\n//# sourceURL=webpack:///./src/funcoes.js?");
 
 /***/ }),
 
-/***/ "./main.js":
-/*!*****************!*\
-  !*** ./main.js ***!
-  \*****************/
+/***/ "./src/main.js":
+/*!*********************!*\
+  !*** ./src/main.js ***!
+  \*********************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _funcoes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./funcoes */ \"./funcoes.js\");\n// import {soma, sub} from './funcoes';\n// import soma from \"./soma\";\n// import sub from \"./sub\";\n\nconsole.log(_funcoes__WEBPACK_IMPORTED_MODULE_0__[\"soma\"](1, 2));\nconsole.log(_funcoes__WEBPACK_IMPORTED_MODULE_0__[\"sub\"](4, 2));\n\n//# sourceURL=webpack:///./main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _funcoes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./funcoes */ \"./src/funcoes.js\");\n// import {soma, sub} from './funcoes';\n// import soma from \"./soma\";\n// import sub from \"./sub\";\n\nconsole.log(_funcoes__WEBPACK_IMPORTED_MODULE_0__[\"soma\"](1, 2));\nconsole.log(_funcoes__WEBPACK_IMPORTED_MODULE_0__[\"sub\"](4, 2));\n\n//# sourceURL=webpack:///./src/main.js?");
 
 /***/ })
 

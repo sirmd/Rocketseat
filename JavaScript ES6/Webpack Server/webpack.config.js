@@ -1,10 +1,13 @@
 //Arquivo de configuração do Webpack
 
 module.exports = {
-    entry: './main.js',
+    entry: './src/main.js',
     output: {
-        path: __dirname,
+        path: __dirname + '/public',
         filename: 'bundle.js',
+    },
+    devServer:{
+        contentBase: __dirname + '/public'
     },
     module:{
         rules: [
