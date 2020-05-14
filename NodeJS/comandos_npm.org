@@ -36,3 +36,6 @@ OBS: Se nada disso der certo, baixar o mongodb direto e instalar ele, foi o que 
 
 *Baixar Insomnia para testar as rotas da api*
 https://insomnia.rest/download/
+
+*Paginação das respostas da API*
+- npm install mongoose-paginate
