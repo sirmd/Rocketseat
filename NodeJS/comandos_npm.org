@@ -28,5 +28,8 @@ https://robomongo.org/download
 
 OBS: Se nada disso der certo, baixar o mongodb direto e instalar ele, foi o que fiz. 
 
-Instalar ORM (Encapsula a lógica das operações do DB através do código)
+*Instalar ORM (Encapsula a lógica das operações do DB através do código)*
 - npm install mongoose
+
+*Realiza o require de models*
+- npm install require-dir 
