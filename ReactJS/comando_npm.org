@@ -1,0 +1,15 @@
+*Comando inicial*
+ - npm install -g create-react-app
+
+*IMPORTANTE*- se posicione na pasta que irá criar o app
+ - create-react-app huntweb
+
+*OBS* Caso dê erro na hora de rodar o 'create-react-app huntweb', rode o seguinte dentro do PowerShell:
+    - Set-ExecutionPolicy
+    - Bypass
+    - "S"
+
+*Comando start*
+ - Posicionar o arquivo 'package.json' dentro de /huntweb
+ - se posicionar no PowerShell dentro de /huntweb e rodar:
+ - npm start

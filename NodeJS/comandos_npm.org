@@ -39,3 +39,6 @@ https://insomnia.rest/download/
 
 *Paginação das respostas da API*
 - npm install mongoose-paginate
+
+*Permitir acesso público à API*
+- npm install cors
