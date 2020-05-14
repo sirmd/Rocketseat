@@ -4,6 +4,11 @@ import api from "../../services/api";
 
 export default class Main extends Component{
 
+    // Produtos serão armazenados na variável 'state' para ser utilizado no setState
+    state = {
+        products: [],
+    }
+
     componentDidMount() {
         this.loadProducts();
     }
@@ -11,12 +16,17 @@ export default class Main extends Component{
     loadProducts = async () => {
         const response = await api.get('/products');
         
-        console.log(response.data.docs);
+        this.setState({ products: response.data.docs});
     };
 
 
 
     render(){
-        return <h1>Hello Mateus</h1>
+    //Retorna todos produtos dentro de state
+    return <div className="productList">
+        {this.state.products.map(product => (
+            <h2 key={product._id}>{product.title}</h2>
+        ))}
+    </div>
     }
 }
