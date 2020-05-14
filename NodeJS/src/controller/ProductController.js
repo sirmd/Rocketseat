@@ -6,5 +6,10 @@ module.exports = {
         const products = await Product.find(/* {where alguma coisa} */);
 
         return res.json(products);
+    },
+
+    async store(req,res){
+        const product = await Product.create(req.body);
+        return res.json(product);
     }
 }
