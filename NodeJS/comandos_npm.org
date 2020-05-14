@@ -1,0 +1,32 @@
+*Comando inicial*
+npm init -y
+
+*{Framework para lidar com rotas e views}*
+npm express
+
+*{Iniciar o server.js}*
+node server.js
+
+*{Dependência necessária para não precisar rodar 'npm server.js' toda vez que alterar algo}*
+*{Rodar npm run dev (dev é um script dentro de package.json)}*
+npm install -D nodemon
+
+*Instalar docker-toolbox*
+- Ao rodar pela primeira vez, se ficar parado em downloading boot2docker.iso, baixe o arquivo
+e coloque na pasta c:\user\.docker\machine\cache e abra novamente o docker terminal
+
+- Se ficar parado em Waiting for ip aperte CTRL+C (fiz isso e continuou, vai saber...)
+
+*Dentro do docker toolbox:*
+- docker pull mongo (Instalar MongoDB)
+- Depois de instalado: docker run --name mongodb -p 27017:27017 -d mongo
+- docker ps (Imagens que estão rodando no Docker)
+- para testar acesse no navegador localhost:27017
+
+*Instalar Robo3t para manipular MongoDB*
+https://robomongo.org/download
+
+OBS: Se nada disso der certo, baixar o mongodb direto e instalar ele, foi o que fiz. 
+
+Instalar ORM (Encapsula a lógica das operações do DB através do código)
+- npm install mongoose
