@@ -13,3 +13,6 @@
  - Posicionar o arquivo 'package.json' dentro de /huntweb
  - se posicionar no PowerShell dentro de /huntweb e rodar:
  - npm start
+
+ *Comunicar com API*
+ - yarn add axios dentro de /huntweb
