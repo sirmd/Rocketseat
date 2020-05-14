@@ -16,3 +16,6 @@
 
  *Comunicar com API*
  - yarn add axios dentro de /huntweb
+
+ *Navegação*
+ - yarn add react-router-dom
