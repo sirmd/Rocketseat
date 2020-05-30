@@ -17,3 +17,15 @@ react-native start
 
 OBS2: Ao instalar alguma dependência que mexa com o código nativo, será
 necessário rodar o run-android novamente
+
+biblioteca de navegação:
+- yarn add react-navigation@2.18.3
+
+
+ERROS e SOLUÇÕES:
+'undefined is not an object':
+	Dentro do arquivo: '\node_modules\react-native-safe-area-view\index.js'
+	mudar: 
+	this.view._component.measureInWindow((winX, winY, winWidth, winHeight)
+	para
+	this.view.measureInWindow((winX, winY, winWidth, winHeight) => {
