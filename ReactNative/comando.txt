@@ -1,0 +1,19 @@
+instalar dependências:
+- choco install -y nodejs-lts yarn python2 jdk8
+
+instalar react-native:
+- npm install -g react-native-cli
+
+iniciar projeto
+- se posicionar dentro da pasta do projeto
+- react-native init <nome_do_projeto>
+
+rodar projeto pela primeira vez
+- abrir vscode na pasta do projeto
+- abrir terminal e rodar: react-native run-android
+OBS: a primeira vez irá demorar alguns minutos.
+- Após a primeira vez rodado, pode ser inicializado novamente com o comando:
+react-native start
+
+OBS2: Ao instalar alguma dependência que mexa com o código nativo, será
+necessário rodar o run-android novamente
