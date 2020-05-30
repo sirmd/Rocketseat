@@ -21,6 +21,11 @@ necessário rodar o run-android novamente
 biblioteca de navegação:
 - yarn add react-navigation@2.18.3
 
+biblioteca para buscar dados da API construída no módulo NODE.JS
+- yarn add axios
+
+debuggar emulador:
+- no emulador, CTRL+M, Debug
 
 ERROS e SOLUÇÕES:
 'undefined is not an object':
