@@ -27,6 +27,10 @@ biblioteca para buscar dados da API construída no módulo NODE.JS
 debuggar emulador:
 - no emulador, CTRL+M, Debug
 
+biblioteca browser integrador (webview)
+- yarn add react-native-webview
+- react-native link react-native-webview
+
 ERROS e SOLUÇÕES:
 'undefined is not an object':
 	Dentro do arquivo: '\node_modules\react-native-safe-area-view\index.js'
@@ -34,3 +38,6 @@ ERROS e SOLUÇÕES:
 	this.view._component.measureInWindow((winX, winY, winWidth, winHeight)
 	para
 	this.view.measureInWindow((winX, winY, winWidth, winHeight) => {
+	
+Erro Webview: .\android\gradlew clean 
+depois rodar react-native run-android
