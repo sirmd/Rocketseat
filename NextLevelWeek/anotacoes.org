@@ -175,10 +175,13 @@
 
 * AULA 3 - React
     *** Tudo que for repetido dentro do app deve ser criado em um componente .tsx
-
+* Instalar pacote de ícones
+    *** npm install react-icons
 
 
     ** div>ul>li*5 => Cria uma div com um ul e 5 li
+    ** div#page-home => Cria <div id="page-home">
+    ** div.content => Cria <div className="content">
     ** React.FC => FC: Function Component
     ** JSX: Sintaxe de XML dentro do JavaScript (.tsx)
     ** States são informações guardadas pelo componente
