@@ -167,3 +167,17 @@
         * QueryParam é utilizado quando houver parâmetros opcionais na rota
 
     ** express.Routes() necessário para poder utilizar as rotas em outro arquivo
+
+
+
+
+
+
+* AULA 3 - React
+    *** Tudo que for repetido dentro do app deve ser criado em um componente .tsx
+    
+
+
+    ** div>ul>li*5 => Cria uma div com um ul e 5 li
+    ** JSX: Sintaxe de XML dentro do JavaScript (.tsx)
+
