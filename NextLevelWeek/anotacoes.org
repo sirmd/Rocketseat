@@ -177,6 +177,10 @@
     *** Tudo que for repetido dentro do app deve ser criado em um componente .tsx
 * Instalar pacote de ícones
     *** npm install react-icons
+    *** npm install @types/react-icons -D
+
+* Instalar biblioteca de rotas
+    *** npm install react-router-dom
 
 
     ** div>ul>li*5 => Cria uma div com um ul e 5 li
