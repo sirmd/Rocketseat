@@ -175,9 +175,10 @@
 
 * AULA 3 - React
     *** Tudo que for repetido dentro do app deve ser criado em um componente .tsx
-    
+
 
 
     ** div>ul>li*5 => Cria uma div com um ul e 5 li
+    ** React.FC => FC: Function Component
     ** JSX: Sintaxe de XML dentro do JavaScript (.tsx)
 
