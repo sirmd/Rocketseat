@@ -181,4 +181,4 @@
     ** div>ul>li*5 => Cria uma div com um ul e 5 li
     ** React.FC => FC: Function Component
     ** JSX: Sintaxe de XML dentro do JavaScript (.tsx)
-
+    ** States são informações guardadas pelo componente
