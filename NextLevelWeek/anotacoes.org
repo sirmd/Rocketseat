@@ -182,6 +182,12 @@
 * Instalar biblioteca de rotas
     *** npm install react-router-dom
 
+* Instalar react-leaflet para integrar o Mapa
+    *** npm install leaflet react-leaflet
+    *** npm install @types/react-leaflet -D
+    *** Importar css do site leafletjs.com/examples/quick-start/
+    *** Exemplo: https://github.com/PaulLeCam/react-leaflet/blob/master/example/components/simple.js
+
 
     ** div>ul>li*5 => Cria uma div com um ul e 5 li
     ** div#page-home => Cria <div id="page-home">
