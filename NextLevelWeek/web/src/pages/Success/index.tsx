@@ -1,10 +1,9 @@
 import React from 'react';
 import { FiCheckCircle } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
+
 import './styles.css';
 interface Props {
-  message?: string,
-  page?: string
+  message?: string
 };
 
 const Success: React.FC<Props> = (props) => {
@@ -16,11 +15,6 @@ const Success: React.FC<Props> = (props) => {
           {props.message}
         </strong>
       </span>
-      <Link to={!props.page ? '/' : props.page}>
-        <button>
-          Ok!
-          </button>
-      </Link>
     </div>
   );
 }
