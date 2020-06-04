@@ -1,7 +1,7 @@
-import React, { useEffect, useState, ChangeEvent } from 'react';
+import React, { useEffect, useState, ChangeEvent, FormEvent } from 'react';
 import logo from '../../assets/logo.svg';
 import './styles.css';
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
 import { Map, TileLayer, Marker } from "react-leaflet";
 import { LeafletMouseEvent } from "leaflet";
@@ -33,7 +33,7 @@ const CreatePoint = () => {
 
     const [selectedUf, setSelectedUf] = useState('0');
     const [selectedCity, setSelectedCity] = useState('0');
-    const [selectedItems, setSelectedItems] = useState<[number, number]>([0, 0]);
+    const [selectedItems, setSelectedItems] = useState<[number, number]>([]);
     const [selectedPosition, setSelectedPosition] = useState<[number, number]>([0, 0]);
     const [initialPosition, setinitialPosition] = useState<[number, number]>([0, 0]);
 
@@ -42,6 +42,8 @@ const CreatePoint = () => {
         email: '',
         whatsapp: '',
     })
+
+    const history = useHistory();
 
     // Carregar os itens
     useEffect(() => {
@@ -69,12 +71,17 @@ const CreatePoint = () => {
             });
     }, [selectedUf]);
 
+    // Carrega a posição atual na initialPosition e na selectedPosition
     useEffect(() => {
         navigator.geolocation.getCurrentPosition(position => {
             const { latitude, longitude } = position.coords;
             setinitialPosition([
                 latitude, longitude
+            ]);
+            setSelectedPosition([
+                latitude, longitude
             ])
+
         })
     }, [])
 
@@ -113,6 +120,30 @@ const CreatePoint = () => {
 
     }
 
+    async function handleSubmit(event: FormEvent) {
+        event.preventDefault();
+        const { name, email, whatsapp } = formData;
+        const uf = selectedUf;
+        const city = selectedCity;
+        const [latitude, longitude] = selectedPosition;
+        const items = selectedItems;
+
+        const data = {
+            name,
+            email,
+            whatsapp,
+            uf,
+            city,
+            latitude,
+            longitude,
+            items
+        };
+        
+        await api.post('points', data);
+
+        // Redireciona para a home
+        history.push('/');
+    }
 
     return (
         <div id="page-create-point">
@@ -123,7 +154,7 @@ const CreatePoint = () => {
                     Voltar para home
                 </Link>
             </header>
-            <form action="">
+            <form onSubmit={handleSubmit}>
                 <h1>Cadastro do <br /> Ponto de Coleta</h1>
                 <fieldset>
                     <legend>
