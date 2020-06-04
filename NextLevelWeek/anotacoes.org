@@ -188,6 +188,8 @@
     *** Importar css do site leafletjs.com/examples/quick-start/
     *** Exemplo: https://github.com/PaulLeCam/react-leaflet/blob/master/example/components/simple.js
 
+* Instalar axios para comunicar com a api node
+    *** npm install axios
 
     ** div>ul>li*5 => Cria uma div com um ul e 5 li
     ** div#page-home => Cria <div id="page-home">
@@ -195,3 +197,7 @@
     ** React.FC => FC: Function Component
     ** JSX: Sintaxe de XML dentro do JavaScript (.tsx)
     ** States são informações guardadas pelo componente
+    ** useEffect é utilizado para executar uma função uma única vez
+    ** sempre que criar estado para array ou objeto, é necessário
+        ** informar manualmente o tipo da variável
+        ** isso pode ser feito usando uma interface
