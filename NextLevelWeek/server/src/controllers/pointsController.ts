@@ -72,7 +72,7 @@ class PointsController {
 
         // Fiz isso para que os itens fiquem dentro do objeto 'Point'
         point["items"] = items;
-        return response.json(point);
+        return response.json({ point });
     };
 
     async index(request: Request, response: Response) {
@@ -83,7 +83,7 @@ class PointsController {
             .split(',')
             .map((item => Number(item.trim())));
 
-        const allItems =  (await knex('items').select('id')).map((item) => {
+        const allItems = (await knex('items').select('id')).map((item) => {
             return item.id;
         });
 

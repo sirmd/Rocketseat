@@ -243,11 +243,16 @@
     *** expo install expo-permissions
 
 * Criando página do detalhe
+    *** expo install expo-mail-composer
+
 * Buscando itens da API
     *** npm install axios
+
 * Buscando pontos da API
 * Buscando detalhes do ponto da API
 * Busca de UF e cidade
 
     ** Sempre que for exportar uma imagem para usar no app, exportar em 3 tamanhos, 1x, 2x e 3x
     ** operador condicional if-then => (condicao) && retorno
+    ** KeyboardAvoidingView serve para evitar que o teclado cubra o input no iOS
+    ** Ao abrir o teclado, caso os textos não se posicionem automaticamente, colocar eles dentro de uma View em branco
