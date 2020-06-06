@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import knex from '../database/connection';
+import { celebrate, Joi } from "celebrate";
 
 class PointsController {
 
@@ -18,7 +19,7 @@ class PointsController {
         } = request.body;
 
         const point = {
-            image: 'https://images.unsplash.com/photo-1556767576-5ec41e3239ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60',
+            image: request.file.filename,
             name: name.toUpperCase(),
             email: email.toLowerCase(),
             whatsapp,
@@ -37,12 +38,15 @@ class PointsController {
         const point_id = insertedIds[0];
 
         // Insere na tabela 'point_items' cada item passado no request
-        const pointItems = items.map((item_id: number) => {
-            return {
-                item_id,
-                point_id,
-            };
-        });
+        const pointItems = items
+            .split(',')
+            .map((item: string) => Number(item.trim()))
+            .map((item_id: number) => {
+                return {
+                    item_id,
+                    point_id,
+                };
+            });
         await trx('point_items').insert(pointItems);
 
         // Commita os dados inseridos
@@ -65,14 +69,18 @@ class PointsController {
                 message: 'Point Not Found',
             });
         }
+        const serializedPoints = {
+            ...point,
+            image_url: `http://10.0.0.110:3333/uploads/${point.image}`,
+        };
 
         const items = await knex('items')
             .join('point_items', 'items.id', '=', 'point_items.item_id')
             .where('point_items.point_id', id);
 
         // Fiz isso para que os itens fiquem dentro do objeto 'Point'
-        point["items"] = items;
-        return response.json({ point });
+        serializedPoints["items"] = items;
+        return response.json({ serializedPoints });
     };
 
     async index(request: Request, response: Response) {
@@ -111,7 +119,14 @@ class PointsController {
             .distinct()
             .select('points.*');
 
-        return response.json(points);
+        const serializedPoints = points.map(point => {
+            return {
+                ...point,
+                image_url: `http://10.0.0.110:3333/uploads/${point.image}`
+            };
+        })
+
+        return response.json(serializedPoints);
     };
 }
 

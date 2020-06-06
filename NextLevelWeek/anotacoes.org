@@ -256,3 +256,21 @@
     ** operador condicional if-then => (condicao) && retorno
     ** KeyboardAvoidingView serve para evitar que o teclado cubra o input no iOS
     ** Ao abrir o teclado, caso os textos não se posicionem automaticamente, colocar eles dentro de uma View em branco
+
+* AULA 5
+
+* Upload de imagens
+        *** SERVER: npm install multer
+        *** SERVER: npm install @types/multer -D
+    ** Configurando backend
+        *** Criar pasta config
+            *** multer.ts
+    ** Criando Dropzone no ReactJS
+        *** WEB: npm install --save react-dropzone
+
+* Validação de entrada de dados
+    *** SERVER: npm install celebrate
+    *** SERVER: npm install @types/hapi__joi
+* Deploy
+    ** backend
+    ** Frontend
