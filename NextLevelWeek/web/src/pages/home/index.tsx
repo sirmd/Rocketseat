@@ -30,20 +30,18 @@ const Home = () => {
                         de coleta de resíduos.
                     </h1>
                     <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.</p>
-                    <form onSubmit={handleSearch}>
                     <Link to="/create-point">
                         <span>
                             <FiLogIn />
                         </span>
                         <strong>Cadastro um ponto de coleta</strong>
                     </Link>
-                        <button type="submit" >
+                        <a href="#" onClick={handleSearch} >
                             <span>
                                 <FiSearch />
                             </span>
                             <strong>Pesquisar um ponto de coleta</strong>
-                        </button>
-                    </form>
+                        </a>
                 </main>
             </div>
         </div>

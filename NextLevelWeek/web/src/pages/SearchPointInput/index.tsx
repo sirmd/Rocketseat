@@ -1,8 +1,7 @@
 import React, { useEffect, useState, ChangeEvent, FormEvent } from 'react';
 
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import axios from 'axios';
-import { FiArrowLeft } from 'react-icons/fi';
 import api from '../../services/api';
 
 import './styles.css';
@@ -23,8 +22,6 @@ interface City {
 }
 
 const SearchPoints = () => {
-
-  const [searchPage, setSearchPage] = useState(false);
 
   const [uf, setUF] = useState<UF[]>([]);
   const [city, setCity] = useState<City[]>([]);
@@ -59,15 +56,6 @@ const SearchPoints = () => {
   function handleSelectedCity(event: ChangeEvent<HTMLSelectElement>) {
     setSelectedCity(event.target.value);
   }
-  function handleSearch(event: FormEvent) {
-    event.preventDefault();
-    setSearchPage(true);
-  }
-  function handleHome(event: FormEvent) {
-    event.preventDefault();
-    setSearchPage(false);
-    history.push('/');
-  }
 
   async function handleSubmit(event: FormEvent) {
     event.preventDefault();
@@ -83,14 +71,14 @@ const SearchPoints = () => {
 
     console.log('points_api: ', filteredPoints);
 
-    // history.push('/search-result', { filteredPoints });
+    history.push('/search-results', { filteredPoints });
 
   }
 
 
   return (
     <div id="search-point">
-      {searchPage ? alert('Search page') : null}
+      
 
       <form onSubmit={handleSubmit}>
 
@@ -130,8 +118,7 @@ const SearchPoints = () => {
               </select>
             </div>
           </fieldset>
-          <button type="submit" onSubmit={handleSearch}>Buscar</button>
-          <button type="button" onClick={handleHome}>Voltar</button>
+          <button type="submit" >Buscar</button>
         </span>
 
       </form>
