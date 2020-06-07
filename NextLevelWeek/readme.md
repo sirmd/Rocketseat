@@ -1,5 +1,8 @@
 <h1 align="center">Ecoleta Application</h1>
 
+ - <span><img href="https://nodejs.org/en/" src="https://img.shields.io/badge/NodeJS-Backend-red.svg?style=flat-square"/></span>
+ - <span><img href="https://nodejs.org/en/" src="https://img.shields.io/badge/reactJS-front--end-green"/></span>
+ - <span><img href="https://nodejs.org/en/" src="https://img.shields.io/badge/react%20native-mobile-blue"/></span>
 ## Description
   - Application developed for web/mobile during the next level week (event promoted by Rocketseat).
 
