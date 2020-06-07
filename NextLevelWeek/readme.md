@@ -16,7 +16,10 @@
 
 ## Knowledges
  - Building the backend using node.js
+ - Creating routes to fetch data from the backend
  - Building front-end using ReactJS
+ - Creating routes to handle page redirection
+ - Handling with data fetched from the backend
  - Building mobile using ReactNative
 
 ## Credits
