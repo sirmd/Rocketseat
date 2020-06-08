@@ -10,7 +10,7 @@
 ## Description
   - Application developed for web/mobile during the next level week (event promoted by Rocketseat).
 
-## Prints Web 💻
+## Web 💻
 <p align="center">
   <img width="250" src=".github/web-1.png"/>
   <img width="250" src=".github/web-2.png"/>
@@ -35,7 +35,7 @@
  - Building mobile using ReactNative
  - Using external APIs such as <a href="https://servicodados.ibge.gov.br/api/docs/localidades?versao=1">IBGE's API</a>
 
-## Credits 
+## Credits 👏
   - <a target="_blank" href="https://rocketseat.com.br">Rocketseat</a>
 
 ## Contact ✉
