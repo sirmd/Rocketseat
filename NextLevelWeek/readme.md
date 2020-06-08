@@ -1,4 +1,8 @@
-<h1 align="center">Ecoleta Application</h1>
+<h1 align="center">
+  Ecoleta Application
+ <br/>
+  <img width="250" src=".github/logo.png"/>
+</h1>
 
  - <span><img href="https://nodejs.org/en/" src="https://img.shields.io/badge/NodeJS-Backend-red.svg?style=flat-square"/></span>
  - <span><img href="https://nodejs.org/en/" src="https://img.shields.io/badge/reactJS-front--end-green"/></span>
