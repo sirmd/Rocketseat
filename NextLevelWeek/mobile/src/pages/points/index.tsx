@@ -17,8 +17,8 @@ interface Item {
 }
 
 interface Params {
-    uf: string,
-    city: string,
+    selectedUf: string,
+    selectedCity: string,
 }
 
 interface Point {
@@ -69,11 +69,10 @@ const Points = () => {
     }, []);
 
     useEffect(() => {
-        console.log(routeParams);
         api.get('points', {
             params: {
-                city: routeParams.city,
-                uf: routeParams.uf,
+                city: routeParams.selectedCity,
+                uf: routeParams.selectedUf,
                 items: selectedItems
             }
         }).then(response => {
@@ -132,7 +131,7 @@ const Points = () => {
                                     <View style={styles.mapMarkerContainer}>
 
                                         <Image style={styles.mapMarkerImage} source={{ uri: point.image_url }} />
-                                        <Text style={styles.mapMarkerTitle}>{toTitleCase(point.name.toLowerCase().replace('mercado',''))}</Text>
+                                        <Text style={styles.mapMarkerTitle}>{toTitleCase(point.name.toLowerCase().replace('mercado', ''))}</Text>
                                     </View>
                                 </Marker>
                             ))}

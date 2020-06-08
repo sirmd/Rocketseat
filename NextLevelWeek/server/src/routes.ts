@@ -13,7 +13,9 @@ const itemsController = new ItemsController();
 
 routes.get('/items', itemsController.index);
 routes.get('/points', pointsController.index);
+routes.get('/ufs', pointsController.showUfs);
 routes.get('/points/:id', pointsController.show);
+routes.get('/points/cities/:uf', pointsController.showCities);
 routes.post('/points',
     upload.single('image'),
     celebrate(

@@ -62,14 +62,14 @@ class PointsController {
     async show(request: Request, response: Response) {
         const { id } = request.params;
 
-        const point = await knex('points').where('id', id).first();
+        let point = await knex('points').where('id', id).first();
 
         if (!point) {
             return response.status(400).json({
                 message: 'Point Not Found',
             });
         }
-        const serializedPoints = {
+        point = {
             ...point,
             image_url: `http://10.0.0.110:3333/uploads/${point.image}`,
         };
@@ -79,8 +79,8 @@ class PointsController {
             .where('point_items.point_id', id);
 
         // Fiz isso para que os itens fiquem dentro do objeto 'Point'
-        serializedPoints["items"] = items;
-        return response.json({ serializedPoints });
+        point["items"] = items;
+        return response.json({ point });
     };
 
     async index(request: Request, response: Response) {
@@ -128,6 +128,29 @@ class PointsController {
 
         return response.json(serializedPoints);
     };
+
+    async showCities(request: Request, response: Response) {
+        const { uf } = request.params;
+
+        const cities = await knex('points')
+            .where('uf', String(uf).toUpperCase())
+            .distinct()
+            .select('city');
+
+        return response.json(cities);
+    }
+
+    async showUfs(request: Request, response: Response) {
+
+        const ufs = (await knex('points')
+            .distinct()
+            .select('uf'))
+            .map(item => item.uf);
+
+        console.log(ufs);
+
+        return response.json(ufs);
+    }
 }
 
 

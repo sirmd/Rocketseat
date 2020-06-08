@@ -274,3 +274,9 @@
 * Deploy
     ** backend
     ** Frontend
+
+* DESAFIOS
+
+* Picker select no mobile para UF e Cidade
+    *** npm install react-native-picker-select
+
