@@ -6,7 +6,7 @@
 ## Description
   - Application developed for web/mobile during the next level week (event promoted by Rocketseat).
 
-## Prints
+## Prints Web 💻
 <p align="center">
   <img width="250" src="https://i.pinimg.com/originals/69/b8/b9/69b8b9d496239d4169e7de4ceec8892a.png"/>
   <img width="250" src="https://i.pinimg.com/originals/c2/fa/c0/c2fac02acfcf83ebedfc91fa30a29b00.png"/>
@@ -17,7 +17,7 @@
   <img width="250" src="https://i.pinimg.com/originals/fb/3b/62/fb3b622ce951a18f5581b67f13b10fa5.png"/>
 </p>
 
-## Knowledges
+## Knowledges 🚀
  - Building the backend using node.js
  - Creating routes to fetch data from the backend
  - Building front-end using ReactJS
@@ -28,6 +28,6 @@
 ## Credits
   - <a target="_blank" href="https://rocketseat.com.br">Rocketseat</a>
 
-## Contact
+## Contact ✉
   - <a target="_blank" href="https://www.linkedin.com/in/mateus-campos-deitos-42688864//">LinkedIn</a>
   - <a target="_blank" href="mailto:matdeitos@gmail.com">E-mail</a>
